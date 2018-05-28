@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="common/header :: common-header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/css/site.css}" rel="stylesheet"/>
+    <!--<title>Title</title>-->
+</head>
+<body>
+<div th:replace="common/header :: common-navbar"></div>
+<div class="container">
+    <div style="padding-left: 1em">
+        <h1>Add Contract</h1>
+        <form method="POST" action="/contract/create" th:object="${contract}">
+            <table>
+                <tr>
+                    <td class="form_no_border">Name <input type="text" required minlength="2" maxlength="50"
+                                    name="contractName" th:value="*{contractName}"/></td>
+                </tr>
+                <tr>
+                    <td class="form_no_border">Company <input type="text" required minlength="5" maxlength="5"
+                                       name="contractCompany" th:value="*{contractCompany}"/></td>
+                </tr>
+                <tr>
+                    <td class="form_no_border">Department <input type="text" required minlength="3" maxlength="3"
+                                          name="contractDepartment"
+                                          th:value="*{contractDepartment}"/></td>
+                </tr>
+                <tr>
+                    <td class="form_no_border">Location <input type="text" required minlength="2" maxlength="2"
+                                        name="contractLocation" th:value="*{contractLocation}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form_no_border"><input type="submit" value="Submit"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div th:replace="common/footer :: common-copyright"></div>
+</div>
+</body>
+</html>

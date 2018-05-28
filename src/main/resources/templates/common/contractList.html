@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common-contractList">
+    <meta charset="UTF-8">
+    <title>contractList</title>
+</head>
+<body>
+<div th:fragment="common-contractList">
+    <div class="content">
+        <h1> Contract List</h1>
+
+        <form method="GET" action="/contract/add">
+            <td>
+                <button type="submit">Add Contract</button>
+            </td>
+        </form>
+        <div style="margin-bottom: 1em; font-size: xx-large"></div>
+        <!--Add contract list here-->
+
+        <table class="bordered_table" style="font-size: x-large">
+            <thead style="font-weight: bold">
+            <tr>
+                <td>Name</td>
+                <td>Company</td>
+                <td>Department</td>
+                <td>Location</td>
+                <td></td>
+                <td></td>
+            </tr>
+            </thead>
+            <tbody>
+
+            <div>
+                <tr th:each="contract : ${contracts}">
+                    <td th:text="${contract.getContractName()}">Contract Name</td>
+                    <td th:text="${contract.getContractCompany()}">Company</td>
+                    <td th:text="${contract.getContractDepartment()}">Department</td>
+                    <td th:text="${contract.getContractLocation()}">Location</td>
+                    <td><form method="GET" th:action="@{'/contract/edit/' + ${contract.getContractID()}}">
+                        <button type="submit">Edit</button></form>
+                    </td>
+                    <td><form method="POST" th:action="@{'/contract/delete/' + ${contract.getContractID()}}">
+                        <button type="submit">Delete</button></form>
+                    </form>
+                    </td>
+                </tr>
+            </div>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+</body>
+</html>

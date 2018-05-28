@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:fragment="common-header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/css/site.css}" rel="stylesheet"/>
+    <title>ERRIS</title>
+</head>
+<body>
+<div th:fragment="common-navbar">
+    <div class="header">
+        <header>
+            <div id="logo" style="font-size: xx-large; padding-left: .5em">
+                <strong> Employee Report Review Information System (ERRIS)</strong>
+                <!--ToDO add logo?-->
+                <!--<img src="img/logo2.jpg" alt="A and E Custom Cuddles" height="100" width="250">-->
+            </div>
+
+            <section class="nav-links" style="padding-left: .5em">
+                <ul>
+                    <li><a th:href="@{/home}">Home</a></li>
+                    <li><a th:href="@{/report/import}">Import Report</a></li>
+                    <!--ToDO: Do we need an about page?-->
+                    <!--<li><a href="about.html">About</a></li>-->
+                </ul>
+            </section>
+        </header>
+    </div>
+</div>
+</body>
+</html>

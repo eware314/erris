@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="common/header :: common-header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/css/site.css}" rel="stylesheet"/>
+    <!--<title>Title</title>-->
+</head>
+<body>
+<div th:replace="common/header :: common-navbar"></div>
+<div class="container">
+    <div class="content" style="font-size: x-large; padding-right: 1em">
+        <p style="font-size: large; font-weight: bold">Welcome to the ERRIS application!</p>
+        <p>This system is designed to review the employee reporting from HR and verify the validity
+         of the GL information assigned to each employee. The current list of contracts is shown below.
+         This list must be maintained as contracts change. Once the list is up-to-date, the report
+         is imported and processed, displaying a list of errors if any are found.</p>
+
+    </div>
+        <div th:replace="common/contractList :: common-contractList"
+             th:with="contractRecordList=${contracts}"></div>
+
+
+
+    <div th:replace="common/footer :: common-copyright"></div>
+</div>
+</body>
+</html>

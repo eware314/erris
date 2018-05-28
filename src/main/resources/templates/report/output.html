@@ -1,0 +1,47 @@
+<!--Add contact list here-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="common/header :: common-header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/css/site.css}" rel="stylesheet"/>
+    <!--<title>Title</title>-->
+</head>
+<div th:replace="common/header :: common-navbar"></div>
+<body>
+<div class="container">
+    <div class="content" style="font-size: x-large">
+        Employee Error Report
+        <!--Add contract list here-->
+            <table class="bordered_table" th:unless="${errors.isEmpty()}">
+                <thead style="font-weight: bold">
+                <tr>
+                    <td>Employee ID</td>
+                    <td>Last Name</td>
+                    <td>First Name</td>
+                    <td>Supervisor</td>
+                    <td>Company</td>
+                    <td>Department</td>
+                    <td>Location</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="employee : ${errors}">
+
+                    <td th:text="${employee.getEmployeeID()}">Employee ID</td>
+                    <td th:text="${employee.getEmployeeLastName()}">Last Name</td>
+                    <td th:text="${employee.getEmployeeFirstName()}">First Name</td>
+                    <td th:text="${employee.getEmployeeSupervisorName()}">Supervisor</td>
+                    <td th:text="${employee.getContractRecord().getContractCompany()}">Company</td>
+                    <td th:text="${employee.getContractRecord().getContractDepartment()}">Department</td>
+                    <td th:text="${employee.getContractRecord().getContractLocation()}">Location</td>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        <div th:if="${errors.isEmpty()}" style="padding-bottom: 3em; padding-top: 3em;">No Errors Found</div>
+        <div th:replace="common/footer :: common-copyright"></div>
+    </div>
+</div>
+</body>
+</html>

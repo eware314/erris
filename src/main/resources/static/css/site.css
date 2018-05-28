@@ -1,0 +1,98 @@
+/* site.css created by Erika Bickford on 3-4-2018*/
+/*Body, Header, and Footer segments were used to style ALL pages.*/
+/*Classes were used to style groupings across multiple pages*/
+
+html, body {
+    padding: 0;
+    margin: 0;;
+}
+
+header {
+    position: fixed;
+    width: inherit;
+    background-color: inherit;
+    height: 175px;
+}
+
+footer {
+    text-align: center;
+    background-color: gray;
+    border: solid 1px black;
+    padding: 10px;
+    border-radius: 5px;
+    float: right;
+    width: 972px;
+}
+
+
+
+body {
+    /*This font family is chosen for readability*/
+    font-family: Segoe UI, Arial, sans-serif;
+    font-size: 16px;
+    background: url("../images/lightBackground.JPG");
+    background-size: cover;
+
+}
+
+.container {
+    width: 989px;
+    margin: 0 auto;
+    padding-top: 200px;
+    background-color: lightgray;
+}
+
+.header {
+    width: 989px;
+    margin: 0 auto;
+    background-color: darkgray;
+    border-bottom: solid black 1px;
+    padding: 0px;
+}
+
+.content {
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: lightgray;
+}
+
+.nav-links {
+    background-color: lightgray;
+    border: solid 1px black;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+    font-size: large;
+    box-shadow: gray 5px 10px 3px;
+    margin: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    margin-right: 1em;
+}
+
+table.bordered_table, th, td {
+    border-bottom: solid 1px black;
+    padding: .5em;
+}
+
+.form_no_border {
+    border: none;
+    padding: .5em;
+    text-align: right;
+    font-size: large;
+}
+
+input[type="text"]
+{
+    font-size:18px;
+    padding: .1em;
+}
+
+button {
+    font-size: x-large;
+    border-radius: 8px;
+    background-color: darkgray;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="common/header :: common-header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/css/site.css}" rel="stylesheet"/>
+    <!--<title>Title</title>-->
+</head>
+<body>
+<div th:replace="common/header :: common-navbar"></div>
+<div class="container">
+    <div class="content" style="font-size: x-large">
+        ImportReport
+    </div>
+    <div class="content" style="padding-bottom: 3em; font-size: x-large">
+        <form method="POST" action="/report/process" enctype="multipart/form-data">
+            <input type="file" name="file" /><br/>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <div th:replace="common/footer :: common-copyright"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+CREATE TABLE IF NOT EXISTS contract (
+  id   INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  company VARCHAR(5) NOT NULL,
+  department VARCHAR(3) NOT NULL,
+  location VARCHAR(2) NOT NULL
+);
+
+INSERT INTO contract VALUES (DEFAULT, 'Admin', 'ENV08', 'GHB', 'LE');
+INSERT INTO contract VALUES (DEFAULT, 'Molina BPO', 'ENV08', 'GHC', 'LH');
+INSERT INTO contract VALUES (DEFAULT, 'ME PBA', 'ENV08', 'GHK', 'LE');
+INSERT INTO contract VALUES (DEFAULT, 'ME FCLOC', 'ENV08', 'GHH', 'LE');
+INSERT INTO contract VALUES (DEFAULT, 'IT Operations', 'ENV08', 'GHF', 'LE');
+INSERT INTO contract VALUES (DEFAULT, 'IT Development', 'ENV08', 'GHE', 'LE');
+INSERT INTO contract VALUES (DEFAULT, 'IA PBA', 'ENV08', 'GHK', 'LD');
+INSERT INTO contract VALUES (DEFAULT, 'IA Clinical', 'ENV08', 'GHD', 'LD');
+INSERT INTO contract VALUES (DEFAULT, 'WY PBA', 'ENV08', 'GHK', 'LQ');
+INSERT INTO contract VALUES (DEFAULT, 'GA Rebate', 'ENV08', 'GHP', 'LB');
+INSERT INTO contract VALUES (DEFAULT, 'Molina Med PA', 'ENV08', 'GHI', 'LH');
+INSERT INTO contract VALUES (DEFAULT, 'PA Rebate', 'ENV08', 'GHP', 'LV');
+INSERT INTO contract VALUES (DEFAULT, 'WV Clinical', 'ENV08', 'GHD', 'LT');
+INSERT INTO contract VALUES (DEFAULT, 'MS Clinical', 'ENV08', 'GHD', 'LG');
+INSERT INTO contract VALUES (DEFAULT, 'ME OMS', 'ENV08', 'GHJ', 'LE');
+INSERT INTO contract VALUES (DEFAULT, 'VT SSDC', 'ENV08', 'GHR', 'LP');
+INSERT INTO contract VALUES (DEFAULT, 'VT PBA', 'ENV08', 'GHK', 'LP');
+INSERT INTO contract VALUES (DEFAULT, 'IL PBA', 'ENV08', 'GHK', 'LC');
+INSERT INTO contract VALUES (DEFAULT, 'OH PBA', 'ENV08', 'GHK', 'LU');
+INSERT INTO contract VALUES (DEFAULT, 'Pharmacy Sales', 'ENV08', 'GHM', 'LE');
+
+
+

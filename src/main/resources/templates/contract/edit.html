@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="common/header :: common-header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/css/site.css}" rel="stylesheet"/>
+    <!--<title>Title</title>-->
+</head>
+<body>
+<div th:replace="common/header :: common-navbar"></div>
+<div class="container">
+    <div style="padding-left: 1em"><p style="font-size: large;">Please note: You may only edit the
+        contract NAME. If the other
+        fields are incorrect,
+        please delete the contract and create a new one.</p>
+        <h1>Edit Contract</h1>
+        <form method="POST" action="/contract/update" th:object="${contract}">
+            <table>
+                <tr>
+                    <td class="form_no_border">ID <input type="text" required minlength="2"
+                                                         maxlength="50" name="contractId"
+                                                         th:value="*{contractID}"
+                                                         th:readonly="readonly"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form_no_border">Name <input type="text" name="contractName"
+                                                           th:value="*{contractName}"/></td>
+                </tr>
+                <tr>
+                    <td class="form_no_border">Company <input type="text" name="company"
+                                                              th:value="*{contractCompany}"
+                                                              th:readonly="readonly"/></td>
+                </tr>
+                <tr>
+                    <td class="form_no_border">Department <input type="text" name="department"
+                                                                 th:value="*{contractDepartment}"
+                                                                 th:readonly="readonly"/></td>
+                </tr>
+                <tr>
+                    <td class="form_no_border">Location <input type="text" name="location"
+                                                               th:value="*{contractLocation}"
+                                                               th:readonly="readonly"/></td>
+                </tr>
+                <tr>
+                    <td class="form_no_border"><input type="submit" value="Submit"/></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    <div th:replace="common/footer :: common-copyright"></div>
+</div>
+</body>
+</html>
